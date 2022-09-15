@@ -1,5 +1,5 @@
 # Dedupeanalytics Inc.
-![Dedupeanalytics Inc. logo](/Dedupeanalytics/images/dedupeanalytics.png)
+![Dedupeanalytics Inc. logo](/images/dedupeanalytics.png)
 
 ## Team Members:
 - Ethan Price
@@ -21,7 +21,7 @@ After extracting both data sets, the real work began. The world happiness data s
 For the life expectancy data set, the task was slightly different. Within this data set there was a "Level" category that described if the data for that row was at a National or subnational level. This column added many extra rows to each country causing the same country to be listed multiple times within the table, so as to represent all the regions within each country. Before removing any columns, we had to remove all the rows that were listed at a subnational level, so we'd be left with just the national averages for each country. After dropping the subnational rows, we then removed all irrelevant columns: Country code, Level, Region, and years 1990-2014. 
 
 ### Load
-![Project ERD](/Dedupeanalytics/images/ERD.PNG)
+![Project ERD](/images/ERD.PNG)
 Now that we have our two cleaned data sets, containing only the data we desire, we began the process to upload the data to a database. We decided to use PostgreSQL for this project since we were more familiar with that program. In PostgreSQL we created a database to house the data, created two tables, Happiness and Life Expectancy, and sent all the data from Jupyter Notebook to the SQL database. From there, we were able to read the SQL queries back in our Jupyter Notebook and display the tables of information. We are left with a Happiness table containing every country in the world and their respective happiness scores from the years 2015-2019 and a Life Expectancy table that has every country and its respective average life expectancy.
 
 ### Reason for this Topic ("Client's needs")
